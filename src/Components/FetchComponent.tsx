@@ -1,4 +1,5 @@
-import useFetch from '@/hooks/useFetch'
+"use client"
+import useFetch from '@/hooks/useFetch';
 import React from 'react'
 
 type Props = {}

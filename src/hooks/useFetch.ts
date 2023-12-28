@@ -1,6 +1,4 @@
 "use client"
-// useFetch.ts
-
 import { useState, useEffect } from 'react';
 
 interface FetchResult<T> {
@@ -17,7 +15,12 @@ const useFetch = <T>(url: URL): FetchResult<T> => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(url.toString());
+                const options: RequestInit = {
+                    method: "GET",
+                    headers: { "Content-Type": "application/json" },
+                    next: { revalidate: 60 * 60 * 24 },
+                };
+                const response = await fetch(url.toString(), options);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
