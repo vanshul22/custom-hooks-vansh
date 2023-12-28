@@ -1,3 +1,4 @@
+import CheckUserIdle from '@/Components/Checkuseridle'
 import Clipboard from '@/Components/Clipboard'
 import FetchComponent from '@/Components/FetchComponent'
 import LocalStorage from '@/Components/LocalStorage'
@@ -8,7 +9,8 @@ export default function Home() {
     <main>
       {/* <FetchComponent /> */}
       {/* <LocalStorage /> */}
-      <Clipboard/>
+      {/* <Clipboard/> */}
+      {/* <CheckUserIdle/> */}
     </main>
   )
 }
